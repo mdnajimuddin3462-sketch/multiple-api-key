@@ -1,5 +1,5 @@
 import React from 'react';
-
+import myLogo from '/assets/images/logo.png';
 interface HeaderProps {
 }
 
@@ -7,7 +7,7 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="bg-[#1f2022] border-b border-gray-700/50 shadow-md sticky top-0 z-50">
       <nav className="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
-        <img src="/assets/images/logo.png" alt="Robi Technology Logo" style={{ width: 100, height: 45 }} />
+         <img src={myLogo} style={{ width: 100, height: 45 }} />
         
         <div className="flex items-center space-x-6">
           <div className="hidden md:flex items-center space-x-6 text-sm">

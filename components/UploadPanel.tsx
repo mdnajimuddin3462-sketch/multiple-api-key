@@ -2,7 +2,14 @@ import React, { useState, useCallback, useRef, FC } from 'react';
 import { StagedFile, GeneratedMetadata } from '../types';
 import { generateThumbnail, processFileForApi } from '../services/fileProcessor';
 import { GALLERY_DISPLAY_LIMIT } from '../constants';
-
+import general from '/assets/images/general.png';
+import Adobestock from '/assets/images/adobe-stock.png';
+import Shutterstock from '/assets/images/shutterstock.png';
+import Freepik from '/assets/images/freepik.png';
+import GettyImages from '/assets/images/general.png';
+import iStock from '/assets/images/general.png';
+import Dreamstime from '/assets/images/dreamstime.png';
+import Vecteezy from '/assets/images/vecteezy.png';
 interface UploadPanelProps {
   stagedFiles: StagedFile[];
   setStagedFiles: React.Dispatch<React.SetStateAction<StagedFile[]>>;
@@ -22,14 +29,15 @@ interface UploadPanelProps {
 }
 
 const STOCK_SITES = [
-    { key: 'General', name: 'General', logo: '/assets/images/stock-logos/general.png' },
-    { key: 'adobe-stock', name: 'Adobe Stock', logo: '/assets/images/stock-logos/adobe-stock.png' },
-    { key: 'shutterstock', name: 'Shutterstock', logo: '/assets/images/stock-logos/shutterstock.png' },
-    { key: 'freepik', name: 'Freepik', logo: '/assets/images/stock-logos/freepik.png' },
-    { key: 'getty', name: 'Getty Images', logo: '/assets/images/stock-logos/general.png' },
-    { key: 'istock', name: 'iStock', logo: '/assets/images/stock-logos/general.png' },
-    { key: 'dreamstime', name: 'Dreamstime', logo: '/assets/images/stock-logos/dreamstime.png' },
-    { key: 'vecteezy', name: 'Vecteezy', logo: '/assets/images/stock-logos/vecteezy.png' },
+    { key: 'General', name: 'General', logo: general },
+    { key: 'adobe-stock', name: 'Adobe Stock', logo: Adobestock },
+    { key: 'shutterstock', name: 'Shutterstock', logo: Shutterstock },
+    { key: 'freepik', name: 'Freepik', logo: Freepik },
+     { key: 'dreamstime', name: 'Dreamstime', logo: Dreamstime },
+    { key: 'vecteezy', name: 'Vecteezy', logo: Vecteezy },
+    { key: 'getty', name: 'Getty Images', logo: GettyImages },
+    { key: 'istock', name: 'iStock', logo: iStock },
+   
 ];
 
 const UploadPrompt: FC = () => (
